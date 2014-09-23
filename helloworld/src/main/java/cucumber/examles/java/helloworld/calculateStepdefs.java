@@ -18,13 +18,21 @@ public class calculateStepdefs {
 		c = new Calculator(input);
 		
 	}
-
+	
 	@When("^the calculator is run$")
 	public void the_calculator_is_run() throws Throwable {
 	    // Express the Regexp above with the code you wish you had
 	    // throw new PendingException();
 		out = c.Run();
 	}
+	
+	@When("^the calculator is run with variable \"([^\"]*)\" set to value (\\d+)$")
+	public void the_calculator_is_run_with_variable_set_to_value(String variable, int value) throws Throwable {
+	    // Express the Regexp above with the code you wish you had
+	    // throw new PendingException();
+		out = c.Run(variable, value);
+	}
+
 
 	@Then("^the output should be \"([^\"]*)\"$")
 	public void the_output_should_be(String output) throws Throwable {
@@ -33,4 +41,5 @@ public class calculateStepdefs {
 		assertEquals (out, output);
 		
 	}
+		
 }

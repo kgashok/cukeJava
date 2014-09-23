@@ -1,26 +1,35 @@
 package cucumber.examles.java.helloworld;
 
-import javax.script.ScriptEngine;
-
+import org.apache.commons.jexl2.*;
 
 public class Calculator {
-	private String cString;
+	private String cString;  
+	private JexlEngine jexl;
+	private Expression expression;
+	private JexlContext jexlContext;  // used if expression has variables
 	
 	public Calculator(String input) {
-		// TODO Auto-generated constructor stub
 		cString = input;
+		jexl = new JexlEngine();
+	    jexl.setSilent(true);
+	    jexl.setLenient(true);
+	    expression = jexl.createExpression(cString);
+	    jexlContext = new MapContext();    
+	}
+
+	public Calculator(String input, String variable, int value) {
+		cString = input; 
 	}
 
 	public String Run() {
-		// TODO Auto-generated method stub
-		// return null;
-		
-		// process cString
-		
-		//return "4";
-		return "5";
-		
+	    Object eval = expression.evaluate(jexlContext);
+	    return eval.toString();
 	}
 
+	public String Run(String variable, int value) {
+		jexlContext.set("b", value);
+	    Object eval = expression.evaluate(jexlContext);
+	    return eval.toString();
+	}
 
 }
