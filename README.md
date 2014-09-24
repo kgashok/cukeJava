@@ -1,11 +1,12 @@
 cukeJava
 ========
 ![Image](helloworld/img/Cucumber%20capture.PNG?raw=true)
+![Image](helloworld/img/BDDTweet.PNG?raw=true)
 
 BDD in Java using Cucumber within Eclipse. How much more fun can [testing][cukedoc] get? Thanks to the information provided by the folks at Merley, the [instructions][guide] here really helped.
 
 Expanded the initial scope to include a String Calculator, based on [jexl][jexl_video]. Must expand this to use this [repo](https://github.com/uklimaschewski/EvalEx.git) both for Java and C++ versions.
-This is a good exercise as well as a final year project as well.
+Also, this is a good [exercise][grails-spring-cucumber-BDD] as well as a final year project as well.
 
 ### Links to start Reading
 - [TOC][TOC]
@@ -16,4 +17,4 @@ This is a good exercise as well as a final year project as well.
 [cukedoc]: https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder#or-how-i-learned-to-stop-worrying-and-love-testing-start-behaving 
 [TOC]: https://github.com/cucumber/cucumber/wiki/A-Table-Of-Content
 [Feature]: https://github.com/cucumber/cucumber/wiki/Feature-Introduction
-
+[grails-spring-cucumber-BDD]: https://www.youtube.com/watch?v=tezwRwdb2vE  "BDD Cucumber JVM Groovy Spring"
