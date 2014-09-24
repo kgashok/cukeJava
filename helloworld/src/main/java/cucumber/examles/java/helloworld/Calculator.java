@@ -23,6 +23,7 @@ public class Calculator {
 	public Calculator(String input) {
 		cString = input;
 		jexl = new JexlEngine();
+		jexl.setStrict(true);  // to enable exception throw for Division by zero
 	    // jexl.setSilent(true);
 	    // jexl.setLenient(true);
 	    expression = jexl.createExpression(cString);
