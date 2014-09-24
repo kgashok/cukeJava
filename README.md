@@ -1,6 +1,6 @@
 cukeJava
 ========
-![Image](img/Cucumber%20capture.png?raw=true)
+![Image](helloworld/img/Cucumber%20capture.PNG?raw=true)
 
 BDD in Java using Cucumber within Eclipse. How much more fun can testing get? Thanks to the information provided by the folks at Merley, the [instructions][guide] here really helped.
 
