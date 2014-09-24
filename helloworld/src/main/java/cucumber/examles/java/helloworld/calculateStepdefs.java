@@ -24,6 +24,14 @@ public class calculateStepdefs {
 		c.SetVariable(variable, value);
 
 	}
+
+	@When("^the variable \"([^\"]*)\" is not set$")
+	public void the_variable_is_not_set(String variable) throws Throwable {
+	    // Express the Regexp above with the code you wish you had
+	    // throw new PendingException();
+	    c.isVariableSet(variable);
+	}
+
 	
 	@When("^the calculator is run$")
 	public void the_calculator_is_run() throws Throwable {
