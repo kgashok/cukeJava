@@ -22,10 +22,9 @@ public class Calculator {
 	    return eval.toString();
 	}
 
-	public String Run(String variable, int value) {
-		jexlContext.set("b", value);
-	    Object eval = expression.evaluate(jexlContext);
-	    return eval.toString();
+	public void SetVariable(String variable, int value) {
+		jexlContext.set(variable, value);
+	    
 	}
 
 }

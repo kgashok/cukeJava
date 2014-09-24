@@ -21,7 +21,7 @@ public class calculateStepdefs {
 	
 	@When("^the variable \"([^\"]*)\" is set to value (\\d+)$")
 	public void the_variable_is_set_to_value(String variable, int value) throws Throwable {
-		out = c.Run(variable, value);
+		c.SetVariable(variable, value);
 
 	}
 	
