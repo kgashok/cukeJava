@@ -30,8 +30,14 @@ public class Calculator {
 	public String Run() {
 	    if (cString == "Error")
 	    	return cString;
-	    Object eval = expression.evaluate(jexlContext);
-	    return eval.toString();
+	    
+	    try {
+	    	Object eval = expression.evaluate(jexlContext);
+	    	return eval.toString();
+		} catch (ArithmeticException e) {
+			cString = "Overflow";
+			return cString;
+		}
 	    
 	}
 
