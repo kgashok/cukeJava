@@ -21,6 +21,7 @@ Feature: Calculate
   
   Scenario: Evaluate any variable expression
   	Given the input "(89 * b)/89 + 1"
-  	When the calculator is run with variable "b" set to value 10
+  	When the variable "b" is set to value 10  
+  	And the calculator is run
   	Then the output should be "11"
   
