@@ -3,7 +3,7 @@ cukeJava
 ![Image](helloworld/img/Cucumber%20capture.PNG?raw=true)
 ![Image](helloworld/img/BDDTweet.PNG?raw=true)
 
-BDD in Java using Cucumber within Eclipse. How much more fun can [testing][cukedoc] get? Thanks to the information provided by the folks at Merley, the [instructions][guide] here really helped.
+BDD in Java using Cucumber within Eclipse. How much more fun can [testing][cukedoc] get? Thanks to the information provided by the folks at Merley, the [instructions][guide] really helped.
 
 Expanded the initial scope to include a String Calculator, based on [jexl][jexl_video]. Must expand this to use this [repo](https://github.com/uklimaschewski/EvalEx.git) both for Java and C++ versions.
 Also, this is a good [exercise][grails-spring-cucumber-BDD] as well as a final year project as well.
