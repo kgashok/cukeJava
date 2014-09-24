@@ -17,10 +17,6 @@ public class Calculator {
 	    jexlContext = new MapContext();    
 	}
 
-	public Calculator(String input, String variable, int value) {
-		cString = input; 
-	}
-
 	public String Run() {
 	    Object eval = expression.evaluate(jexlContext);
 	    return eval.toString();
