@@ -1,6 +1,8 @@
 package cucumber.examles.java.helloworld;
 
+import java.lang.*;
 import org.apache.commons.jexl2.*;
+
 
 /* 
  * "The common way of using a JEXL engine is to allocate it as a singleton and use this opportunity to tailor its behavior and cache.
@@ -30,8 +32,14 @@ public class Calculator {
 	public String Run() {
 	    if (cString == "Error")
 	    	return cString;
-	    Object eval = expression.evaluate(jexlContext);
-	    return eval.toString();
+	    
+	    try {
+	    	Object eval = expression.evaluate(jexlContext);
+	    	return eval.toString();
+		} catch (JexlException e) {
+			cString = "Overflow";
+			return cString;
+		}
 	    
 	}
 
