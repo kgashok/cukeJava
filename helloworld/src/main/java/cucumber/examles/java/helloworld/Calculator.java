@@ -44,7 +44,7 @@ public class Calculator {
 	}
 
 	public void SetVariable(String variable, int value) {
-		// if (jexlContext.has(variable) == true)
+		// if (jexlContext.has(variable) == true)  // no idea why this doesn't work
 			jexlContext.set(variable, value);
 	    
 	}
@@ -54,7 +54,7 @@ public class Calculator {
 		Object val = jexlContext.get(variable);
 		try {
 			val.toString();
-		} catch (NullPointerException e) {
+		} catch (NullPointerException e) {  // must rewrite to use JexclException
 			cString = "Error";
 		}
 	}
