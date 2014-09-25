@@ -2,7 +2,6 @@ package cucumber.examles.java.helloworld;
 
 import org.apache.commons.jexl2.*;
 
-
 /* 
  * "The common way of using a JEXL engine is to allocate it as a singleton
  *  and use this opportunity to tailor its behavior and cache.
@@ -18,12 +17,14 @@ public class Calculator {
 	private String cString;  
 	private JexlEngine jexl;
 	private Expression expression;
-	private JexlContext jexlContext;  // used if expression has variables
+	// required if expression has variables
+	private JexlContext jexlContext;  
 	
 	public Calculator(String input) {
 		cString = input;
 		jexl = new JexlEngine();
-		jexl.setStrict(true);  // to enable exception for Division by zero
+		// to enable exception for Division by zero
+		jexl.setStrict(true);  
 	    // jexl.setSilent(true);
 	    // jexl.setLenient(true);
 	    expression = jexl.createExpression(cString);
@@ -40,25 +41,24 @@ public class Calculator {
 		} catch (JexlException e) {
 			cString = "Overflow";
 			return cString;
-		}
-	    
+		}   
 	}
 
 	public void SetVariable(String variable, int value) {
-		// if (jexlContext.has(variable) == true)  // no idea why this doesn't work
+		// no idea why this doesn't work
+		// if (jexlContext.has(variable) == true)  
 			jexlContext.set(variable, value);
 	    
 	}
 
 	public void isVariableSet(String variable) {
-		// TODO Auto-generated method stub
 		Object val = jexlContext.get(variable);
 		try {
 			val.toString();
 		} 
-		catch (NullPointerException e) {  // must rewrite to use JexclException
+		// must rewrite to use JexclException
+		catch (NullPointerException e) {  
 			cString = "Error";
 		}
 	}
-
 }
