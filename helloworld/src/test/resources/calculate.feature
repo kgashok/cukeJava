@@ -35,7 +35,7 @@ Feature: Calculate
   Scenario: Evaluate an uninitialized expression
   	Given the input "a/b"
   	And the variable "a" is set to value 10
-  	And the variable "b" is not set  
+  	But the variable "b" is not set  
   	When the calculator is run
   	Then the output should be "Error"
   	
