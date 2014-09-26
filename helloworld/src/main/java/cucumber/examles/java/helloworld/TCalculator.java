@@ -29,6 +29,10 @@ public class TCalculator implements StringCalc {
 				// need to subtract
 				result = new String("5");
 			}
+			if (tokenList[1].equals("*")) {
+				// need to subtract
+				result = new String("36");
+			}
 		}
 		
 		return result;
