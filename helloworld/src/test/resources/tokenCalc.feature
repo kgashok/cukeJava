@@ -28,4 +28,10 @@ Scenario: Multiply using a TokenCalc
   	  And the input "-5 * 40"
   	When the calculator is run
   	Then the output should be "-200"
+
+Scenario: Multiply using a TokenCalc
+  	Given the calculator is a "TokenCalc"
+  	  And the input "1 + 2 + 3"
+  	When the calculator is run
+  	Then the output should be "6"
    
