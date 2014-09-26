@@ -5,4 +5,5 @@ public interface StringCalc {
 	public void SetVariable(String variable, int val);
 	public boolean isVariableSet(String variable);
 	public void SetErrorString ();
+	public void SetString(String input);
 }

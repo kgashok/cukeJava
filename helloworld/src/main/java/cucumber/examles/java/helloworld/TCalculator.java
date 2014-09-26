@@ -8,23 +8,24 @@ public class TCalculator implements StringCalc {
 	private String cString;
 	private StringTokenizer sTokenizer;
 	
-	public TCalculator(String input) {
-		cString = input;
+	public TCalculator() {
+		// need to initialize sTokenizer;
 	}
 
 	public String Run() {
 		// return "4";
 		String result = "NYI";
-		String [] tokenList = cString.split("-+");
-		System.out.println("\nLength: " + tokenList.length);
+		System.out.println("\nInside TCalc.cString ************: " + cString);
+		String [] tokenList = cString.split("\\s");
+		System.out.println("\nInside TCalc.Run() ************ Length: " + tokenList.length);
 		
 		// Still cheating, and not using STringTokenizer yet...
-		if (tokenList.length > 3) {
-			if (tokenList[1] == "+") {
+		if (tokenList.length == 3) {
+			if (tokenList[1].equals("+")) {
 				// need to add
 				result = new String("4");
 			}
-			if (tokenList[1] == "-") {
+			if (tokenList[1].equals("-")) {
 				// need to subtract
 				result = new String("5");
 			}
@@ -47,6 +48,11 @@ public class TCalculator implements StringCalc {
 	public void SetVariable(String variable, int val) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void SetString(String input) {
+		cString = input;
+		System.out.println ("******  Setting the value for cString: " + cString);
 	}
 
 
