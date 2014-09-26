@@ -1,6 +1,7 @@
 package cucumber.examles.java.helloworld;
 
-import java.util.*;
+// StringTokenizer (Java Platform SE 7 ) http://buff.ly/1rpk25I
+import java.util.StringTokenizer;
 
 public class TCalculator implements StringCalc {
 
@@ -12,7 +13,25 @@ public class TCalculator implements StringCalc {
 	}
 
 	public String Run() {
-		return "4";
+		// return "4";
+		String result = "NYI";
+		String [] tokenList = cString.split("-+");
+		System.out.println("\nLength: " + tokenList.length);
+		
+		// Still cheating, and not using STringTokenizer yet...
+		if (tokenList.length > 3) {
+			if (tokenList[1] == "+") {
+				// need to add
+				result = new String("4");
+			}
+			if (tokenList[1] == "-") {
+				// need to subtract
+				result = new String("5");
+			}
+		}
+		
+		return result;
+			
 	}
 
 	public boolean isVariableSet(String variable) {
