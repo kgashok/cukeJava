@@ -45,3 +45,4 @@ Feature: Calculate
   	  And the variable "b" is set to value 0  
   	When the calculator is run
   	Then the output should be "Overflow"
+  

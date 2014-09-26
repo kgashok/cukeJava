@@ -13,7 +13,7 @@ import org.apache.commons.jexl2.*;
     }" http://buff.ly/1quZx2p
 */
 
-public class Calculator {
+public class Calculator implements StringCalc {
 	private String cString;  
 	private JexlEngine jexl;
 	private Expression expression;
@@ -21,7 +21,7 @@ public class Calculator {
 	private JexlContext jexlContext;  
 	
 	public Calculator(String input) {
-		cString = input;
+		cString = input; 
 		jexl = new JexlEngine();
 		// to enable exception for Division by zero
 		jexl.setStrict(true);  
@@ -50,15 +50,20 @@ public class Calculator {
 			jexlContext.set(variable, value);
 	    
 	}
+	
+	public void SetErrorString() {
+		cString = "Error";
+	}
 
-	public void isVariableSet(String variable) {
+	public boolean isVariableSet(String variable) {
 		Object val = jexlContext.get(variable);
 		try {
 			val.toString();
+			return true;
 		} 
 		// must rewrite to use JexclException
 		catch (NullPointerException e) {  
-			cString = "Error";
+			return false;
 		}
 	}
 }
