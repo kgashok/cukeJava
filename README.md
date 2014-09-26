@@ -17,7 +17,11 @@ Expanded the initial scope to include a String Calculator, based on [jexl][jexl_
 Must expand this to use this [repo](https://github.com/uklimaschewski/EvalEx.git) both for Java and C++ versions.
 Also, this is a good [exercise][grails-spring-cucumber-BDD] as well as a final year project (when expanded to cover Spring) as well.
 
+![Image](helloworld/img/Failed%20test%20capture.PNG?raw=true)
+
+
 ### Links to start Reading
+- Imperative vs Declarative Scenarios in User Stories • Ben Mabey http://buff.ly/1vaec9A
 - The Truth about BDD - Clean Coder http://buff.ly/1rnpYeh
 - [TOC][TOC]
   - Start at the [Home](https://github.com/cucumber/cucumber/wiki)
