@@ -11,7 +11,7 @@ public class TCalculator implements StringCalc {
 	
 	public TCalculator() {
 		// need to initialize sTokenizer;
-		
+	
 	}
 
 	public String Run() {
@@ -28,17 +28,17 @@ public class TCalculator implements StringCalc {
 		if (tokenList.length == 3) {
 			if (tokenList[1].equals("+")) {
 				// need to add
-				res_value = Integer.parseInt(tokenList[0]) + Integer.parseInt(tokenList[2]);
+				res_value = Integer.valueOf(tokenList[0]) + Integer.valueOf(tokenList[2]);
 				result = String.valueOf(res_value);
 			}
 			if (tokenList[1].equals("-")) {
 				// need to subtract
-				res_value = Integer.parseInt(tokenList[0]) - Integer.parseInt(tokenList[2]);
+				res_value = Integer.valueOf(tokenList[0]) - Integer.valueOf(tokenList[2]);
 				result = String.valueOf(res_value);
 			}
 			if (tokenList[1].equals("*")) {
 				// need to multiply 
-				res_value = Integer.parseInt(tokenList[0]) * Integer.parseInt(tokenList[2]);
+				res_value = Integer.valueOf(tokenList[0]) * Integer.valueOf(tokenList[2]);
 				result = String.valueOf(res_value);
 			}
 		}
