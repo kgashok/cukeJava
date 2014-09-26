@@ -6,10 +6,12 @@ import java.util.StringTokenizer;
 public class TCalculator implements StringCalc {
 
 	private String cString;
-	private StringTokenizer sTokenizer;
+	// private StringTokenizer sTokenizer;
+	private String[] tokenList;
 	
 	public TCalculator() {
 		// need to initialize sTokenizer;
+		
 	}
 
 	public String Run() {
@@ -17,8 +19,10 @@ public class TCalculator implements StringCalc {
 		String result = "NYI";
 		int res_value = 0;
 		System.out.println("\nInside TCalc.cString ************: " + cString);
-		String [] tokenList = cString.split("\\s");
 		System.out.println("\nInside TCalc.Run() ************ Length: " + tokenList.length);
+		
+		if (tokenList == null)
+			return null;
 		
 		// Still cheating, and not using STringTokenizer yet...
 		if (tokenList.length == 3) {
@@ -38,9 +42,7 @@ public class TCalculator implements StringCalc {
 				result = String.valueOf(res_value);
 			}
 		}
-		
 		return result;
-			
 	}
 
 	public boolean isVariableSet(String variable) {
@@ -60,9 +62,7 @@ public class TCalculator implements StringCalc {
 
 	public void SetString(String input) {
 		cString = input;
+		tokenList = cString.split("\\s");
 		System.out.println ("******  Setting the value for cString: " + cString);
 	}
-
-
-
 }
