@@ -27,21 +27,22 @@ Feature: Calculate
   	
   Scenario: Evaluate a two variable expression
   	Given the input "(a + b) * (a - b) + 2"
-  	And the variable "a" is set to value 10
-  	And the variable "b" is set to value 5  
+  	  And the variable "a" is set to value 10
+  	  And the variable "b" is set to value 5  
   	When the calculator is run
   	Then the output should be "77"
   	
   Scenario: Evaluate an uninitialized expression
   	Given the input "a/b"
-  	And the variable "a" is set to value 10
-  	But the variable "b" is not set  
+  	  And the variable "a" is set to value 10
+  	  But the variable "b" is not set  
   	When the calculator is run
   	Then the output should be "Error"
   	
   Scenario: Evaluate a division by zero
   	Given the input "a / b"
-  	And the variable "a" is set to value 10
-  	And the variable "b" is set to value 0  
+  	  And the variable "a" is set to value 10
+  	  And the variable "b" is set to value 0  
   	When the calculator is run
   	Then the output should be "Overflow"
+  
