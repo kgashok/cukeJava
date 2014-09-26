@@ -22,4 +22,10 @@ Feature: TokCalc
   	  And the input "5 * 4"
   	When the calculator is run
   	Then the output should be "20"
-  
+
+Scenario: Multiply using a TokenCalc
+  	Given the calculator is a "TokenCalc"
+  	  And the input "-5 * 40"
+  	When the calculator is run
+  	Then the output should be "-200"
+   

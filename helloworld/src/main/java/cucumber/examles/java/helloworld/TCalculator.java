@@ -15,6 +15,7 @@ public class TCalculator implements StringCalc {
 	public String Run() {
 		// return "4";
 		String result = "NYI";
+		int res_value = 0;
 		System.out.println("\nInside TCalc.cString ************: " + cString);
 		String [] tokenList = cString.split("\\s");
 		System.out.println("\nInside TCalc.Run() ************ Length: " + tokenList.length);
@@ -23,15 +24,18 @@ public class TCalculator implements StringCalc {
 		if (tokenList.length == 3) {
 			if (tokenList[1].equals("+")) {
 				// need to add
-				result = new String("4");
+				res_value = Integer.parseInt(tokenList[0]) + Integer.parseInt(tokenList[2]);
+				result = String.valueOf(res_value);
 			}
 			if (tokenList[1].equals("-")) {
 				// need to subtract
-				result = new String("5");
+				res_value = Integer.parseInt(tokenList[0]) - Integer.parseInt(tokenList[2]);
+				result = String.valueOf(res_value);
 			}
 			if (tokenList[1].equals("*")) {
-				// need to subtract
-				result = new String("36");
+				// need to multiply 
+				res_value = Integer.parseInt(tokenList[0]) * Integer.parseInt(tokenList[2]);
+				result = String.valueOf(res_value);
 			}
 		}
 		
