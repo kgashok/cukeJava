@@ -45,6 +45,12 @@ public class TCalculator implements StringCalc {
 		return result;
 	}
 
+	public void SetString(String input) {
+		cString = input;
+		tokenList = cString.split("\\s");
+		System.out.println ("******  Setting the value for cString: " + cString);
+	}
+		
 	public boolean isVariableSet(String variable) {
 		// TODO Auto-generated method stub
 		return false;
@@ -58,11 +64,5 @@ public class TCalculator implements StringCalc {
 	public void SetVariable(String variable, int val) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	public void SetString(String input) {
-		cString = input;
-		tokenList = cString.split("\\s");
-		System.out.println ("******  Setting the value for cString: " + cString);
 	}
 }
