@@ -22,6 +22,7 @@ Also, this is a good [exercise][grails-spring-cucumber-BDD] as well as a final y
 
 ### Links to start Reading
 - Imperative vs Declarative Scenarios in User Stories • Ben Mabey http://buff.ly/1vaec9A
+  - Verifying Web Applications: From Business Level Specifications to Automated Model-Based Testing http://buff.ly/1DIBVSg
 - The Truth about BDD - Clean Coder http://buff.ly/1rnpYeh
 - [TOC][TOC]
   - Start at the [Home](https://github.com/cucumber/cucumber/wiki)
