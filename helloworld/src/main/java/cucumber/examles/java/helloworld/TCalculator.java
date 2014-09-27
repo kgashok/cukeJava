@@ -18,8 +18,6 @@ public class TCalculator implements StringCalc {
 		// return "4";
 		String result = "NYI";
 		int res_value = 0;
-		System.out.println("\nInside TCalc.cString ************: " + cString);
-		System.out.println("\nInside TCalc.Run() ************ Length: " + tokenList.length);
 		
 		if (tokenList == null)
 			return null;
@@ -52,7 +50,6 @@ public class TCalculator implements StringCalc {
 	}
 		
 	public boolean isVariableSet(String variable) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
