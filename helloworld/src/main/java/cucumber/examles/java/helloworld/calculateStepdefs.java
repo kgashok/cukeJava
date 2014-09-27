@@ -55,8 +55,4 @@ public class calculateStepdefs {
 		assertEquals (out, output);		
 	}
 	
-	
-
-
-		
 }

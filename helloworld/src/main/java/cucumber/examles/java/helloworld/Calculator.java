@@ -68,7 +68,6 @@ public class Calculator implements StringCalc {
 	}
 
 	public void SetString(String input) {
-		// TODO Auto-generated method stub
 		cString = input;
 	}
 }
