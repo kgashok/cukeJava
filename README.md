@@ -8,6 +8,23 @@ Usually, the business outcomes are too coarse-grained to be used to directly wri
 
 Behaviour-driven development (BDD) takes the position that you can turn an idea for a requirement into implemented, tested, production-ready code simply and effectively, as long as the requirement is specific enough that everyone knows what’s going on. To do this, we need a way to describe the requirement such that everyone – the business folks, the analyst, the developer and the tester – have a common understanding of the scope of the work. From this they can agree a common definiton of “done”, and we escape the dual gumption traps of “that’s not what I asked for” or “I forgot to tell you about this other thing”."  http://buff.ly/1qAmVLP
 
+### What is Behavior Driven Development?
+
+Behavior Driven Development (which we will now refer to as "BDD") follows on from the ideas and principles introduced in Test Driven Development. The key points of writing tests before code really apply to BDD as well. The idea is to not only test your code at the granular level with unit tests, but also test your application end to end, using acceptance tests. We will introduce this style of testing with the use of the Freshen testing framework.
+
+_Behavior Driven Development (BDD) is a subset of Test Driven Development (TDD)._
+![Image](helloworld/img/bdd_cycle.jpg)
+
+The process can be simply defined as:
+
+- Write a failing acceptance test
+- Write a failing unit test
+- Make the unit test pass
+- Refactor
+- Make the acceptance test pass
+
+Rinse and repeat for every feature, as is necessary.
+
 ![Image](helloworld/img/Cucumber%20capture.PNG?raw=true)
 
 BDD in Java using Cucumber within Eclipse. How much more fun can [testing][cukedoc] get? Thanks to the information provided by the folks at Merley, the [instructions][guide] really helped.
